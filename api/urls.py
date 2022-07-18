@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import EmployeView
+from .views import Employe, deleteEmp
 from . import views
 
 urlpatterns = [
-    path('employes', EmployeView.as_view())
+    path('employes', views.Employe),
+    path('delete/<str:name', views.deleteEmp)
 ]
